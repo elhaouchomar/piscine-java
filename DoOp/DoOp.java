@@ -23,7 +23,7 @@ public class DoOp {
                 return Integer.toString(first + last);
                 } 
                 case "%": {
-                return Integer.toString(first + last);
+                return Integer.toString(first % last);
                 } 
                 default:  return "Error";
             }
