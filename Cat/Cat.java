@@ -3,10 +3,10 @@ import java.io.*;
 public class Cat {
     public static void cat(String[] args) throws IOException {
         for (String fileName : args) {
-            try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
-                String line;
-                while ((line = br.readLine()) != null) {
-                    System.out.print(line);
+            try (BufferedInputStream br = new BufferedInputStream(new FileInputStream(fileName))) {
+                int line;
+                while ((line = br.read()) != -1) {
+                    System.out.print((char) line);
                 }
 
             }catch (IOException e) {
