@@ -15,9 +15,9 @@ public class Capitalize {
 
         for (String word : resCap) {
             if (!word.isEmpty()) {
-                res.append(word.substring(0, 1).toUpperCase());
+                res.append(Character.toUpperCase(word.charAt(0)));
                 if (word.length() > 1) {
-                    res.append(word.substring(1));
+                    res.append(word.substring(1).toLowerCase());
                 }
             }
             res.append(" ");
