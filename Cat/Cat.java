@@ -4,9 +4,13 @@ public class Cat {
     public static void cat(String[] args) throws IOException {
         for (String fileName : args) {
             try (BufferedInputStream br = new BufferedInputStream(new FileInputStream(fileName))) {
-                int line;
-                while ((line = br.read()) != -1) {
-                    System.out.print((char) line);
+                byte[] bf = new byte[1024];
+                int bytread;
+
+                while ((bytread = br.read(bf)) != -1) {
+                    for (int i = 0; i < bytread; i++) {
+                        System.out.print((char) bf[i]);
+                    }
                 }
 
             }catch (IOException e) {
