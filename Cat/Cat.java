@@ -8,14 +8,15 @@ public class Cat {
                 int bytread;
 
                 while ((bytread = br.read(bf)) != -1) {
-                    for (int i = 0; i < bytread; i++) {
-                        System.out.print((char) bf[i]);
-                    }
+                    // for (int i = 0; i < bytread; i++) {
+                        System.out.write(bf, 0, bytread);
+                    // }
                 }
 
             }catch (IOException e) {
 
             }
+            System.out.flush();
         }
     }
 }
