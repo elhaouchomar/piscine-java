@@ -9,14 +9,20 @@ public class Capitalize {
 
         FileOutputStream out = new FileOutputStream(outputFile);
 
-
         String r = new String(Files.readAllBytes(Paths.get(inputFile)));
         String[] resCap = r.split("\\s+");
         StringBuilder res = new StringBuilder();
+
         for (String word : resCap) {
-            res.append(word.substring(0, 1).toUpperCase() + word.substring(1));
+            if (!word.isEmpty()) {
+                res.append(word.substring(0, 1).toUpperCase());
+                if (word.length() > 1) {
+                    res.append(word.substring(1));
+                }
+            }
             res.append(" ");
         }
+
         out.write(res.toString().trim().getBytes());
         out.close();
     }
