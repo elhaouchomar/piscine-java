@@ -14,11 +14,7 @@ public class FileSearch {
                     .filter(p -> p.getFileName().toString().equals(fileName))
                     .findFirst();
 
-            if (found.isPresent()) {
-                return startDir.relativize(found.get()).toString();
-            } else {
-                return null;
-            }
+            return found.map(Path::toString).orElse(null);
         } catch (IOException e) {
             return null;
         }
