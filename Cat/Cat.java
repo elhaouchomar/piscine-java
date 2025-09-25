@@ -6,7 +6,7 @@ public class Cat {
             try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
                 String line;
                 while ((line = br.readLine()) != null) {
-                    System.out.println(line);
+                    System.out.print(line);
                 }
 
             }catch (IOException e) {
