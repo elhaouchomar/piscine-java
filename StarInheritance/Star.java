@@ -1,4 +1,3 @@
-package StarInheritance;
 
 public class Star extends CelestialObject {
     private double magnitude;
