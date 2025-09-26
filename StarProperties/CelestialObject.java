@@ -1,8 +1,8 @@
 
 
 public class CelestialObject {
-    double x;
-    double y;
-    double z;
-    String name;
+    public double x;
+    public double y;
+    public double z;
+    public String name;
 }
