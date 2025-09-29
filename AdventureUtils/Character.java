@@ -63,10 +63,14 @@ public class Character {
     }
 
     public static Character fight(Character c1, Character c2) {
-        if (c2.currentHealth > c1.currentHealth) {
-            return c2;
-        } else {
+        while (c1.currentHealth > 0 || c2.currentHealth > 0) {
+            c1.attack(c2);
+            c2.attack(c1);
+        }
+        if (c2.currentHealth == 0) {
             return c1;
+        } else {
+            return c2;
         }
     }
 }
