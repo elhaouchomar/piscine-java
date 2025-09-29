@@ -4,7 +4,7 @@ import java.util.List;
 public class Character {
 
     private final int maxHealth;
-    public int currentHealth;
+    private int currentHealth;
     private final String name;
     private static List<Character> allCharacters = new ArrayList<>();
 
@@ -72,6 +72,16 @@ public class Character {
             if (c1.currentHealth == 0) {
                 return c2;
             }
+        }
+    }
+
+    public void setCurrentHealth(int value) {
+        if (value < 0) {
+            this.currentHealth = 0;
+        } else if (value > maxHealth) {
+            this.currentHealth = maxHealth;
+        } else {
+            this.currentHealth = value;
         }
     }
 }
