@@ -18,7 +18,7 @@ public class Character {
         return currentHealth;
     }
 
-    public String getName(String name) {
+    public String getName() {
         return name;
     }
 
