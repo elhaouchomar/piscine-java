@@ -67,7 +67,7 @@ public abstract class Character {
         }
     }
 
-    public void setCurrentHealth(int value) {
+    public protected void setCurrentHealth(int value) {
         if (value < 0) {
             this.currentHealth = 0;
         } else if (value > maxHealth) {
