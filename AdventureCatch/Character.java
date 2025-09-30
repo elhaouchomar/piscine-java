@@ -1,0 +1,106 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Character {
+
+    private final int maxHealth;
+    private int currentHealth;
+    private final String name;
+    private static List<Character> allCharacters = new ArrayList<>();
+    private Weapon weapon;
+
+    public Character(String name, int maxHealth, Weapon weapon) {
+        this.maxHealth = maxHealth;
+        this.currentHealth = maxHealth;
+        this.name = name;
+        this.weapon = weapon;
+        allCharacters.add(this);
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
+    public int getCurrentHealth() {
+        return currentHealth;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String toString() {
+        if (currentHealth == 0) {
+            return String.format("%s : KO", name);
+        }
+        return String.format("%s : %d/%d", name, currentHealth, maxHealth);
+    }
+
+    public abstract void takeDamage(int damage) throws DeadCharacterException;
+
+    public abstract void attack(Character c) throws DeadCharacterException;
+
+    public static String printStatus() {
+        int count = 0;
+        String str = "------------------------------------------\nCharacters currently fighting :\n";
+        for (Character c : allCharacters) {
+            str += String.format(" - %s\n", c.toString());
+            count++;
+        }
+        str += "------------------------------------------\n";
+
+        if (count == 0) {
+            str = "------------------------------------------\n" + //
+                    "Nobody's fighting right now !\n" + //
+                    "------------------------------------------\n";
+        }
+        return str;
+    }
+
+    public static Character fight(Character c1, Character c2) {
+        while (true) {
+            try {
+                c1.attack(c2);
+            } catch (DeadCharacterException e) {
+                System.out.println(e.getMessage());
+            }
+
+            if (c2.getCurrentHealth() == 0) {
+                return c1;
+            }
+
+            try {
+                c2.attack(c1);
+            } catch (DeadCharacterException e) {
+                System.out.println(e.getMessage());
+            }
+
+            if (c1.getCurrentHealth() == 0) {
+                return c2;
+            }
+        }
+    }
+
+    protected void setCurrentHealth(int value) {
+        if (value < 0) {
+            this.currentHealth = 0;
+        } else if (value > maxHealth) {
+            this.currentHealth = maxHealth;
+        } else {
+            this.currentHealth = value;
+        }
+    }
+
+    public Weapon getWeapon() {
+        return weapon;
+    }
+
+    public int getDamage() {
+        return weapon.getDamage();
+    }
+
+    public boolean isDead() {
+        return currentHealth <= 0;
+    }
+
+}
