@@ -11,21 +11,20 @@ public class Sorcerer extends Character implements Healer {
         return healCapacity;
     }
 
-@Override
-public void heal(Character c) throws DeadCharacterException {
-    if (this.isDead()) {
-        throw new DeadCharacterException(this);
+    @Override
+    public void heal(Character c) throws DeadCharacterException {
+        if (this.isDead()) {
+            throw new DeadCharacterException(this);
+        }
+        if (c.isDead()) {
+            throw new DeadCharacterException(c);
+        }
+        int newHealth = c.getCurrentHealth() + healCapacity;
+        if (newHealth > c.getMaxHealth()) {
+            newHealth = c.getMaxHealth();
+        }
+        c.setCurrentHealth(newHealth);
     }
-    if (c.isDead()) {
-        throw new DeadCharacterException(c);
-    }
-    int newHealth = c.getCurrentHealth() + healCapacity;
-    if (newHealth > c.getMaxHealth()) {
-        newHealth = c.getMaxHealth();
-    }
-    c.setCurrentHealth(newHealth);
-}
-
 
     @Override
     public String toString() {

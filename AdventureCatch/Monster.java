@@ -16,6 +16,9 @@ public class Monster extends Character {
 
     @Override
     public void takeDamage(int damage) throws DeadCharacterException {
+        if (isDead()) {
+            throw new DeadCharacterException(this);
+        }
         setCurrentHealth(getCurrentHealth() - (int) (damage * 0.8));
     }
 
