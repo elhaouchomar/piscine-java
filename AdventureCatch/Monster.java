@@ -24,6 +24,9 @@ public class Monster extends Character {
 
     @Override
     public void attack(Character c) throws DeadCharacterException {
+        if (this.isDead()) {
+            throw new DeadCharacterException(this);
+        }
         int damage = (getWeapon() != null) ? getWeapon().getDamage() : 7;
         c.takeDamage(damage);
     }
