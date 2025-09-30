@@ -16,7 +16,6 @@ public class Sorcerer extends Character implements Healer {
         if (c.getCurrentHealth() == 0) {
             throw new DeadCharacterException(c);
         }
-
         int newHealth = c.getCurrentHealth() + healCapacity;
         if (newHealth > c.getMaxHealth()) {
             newHealth = c.getMaxHealth();
