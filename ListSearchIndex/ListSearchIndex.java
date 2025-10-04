@@ -9,11 +9,19 @@ public class ListSearchIndex {
         return list.lastIndexOf(value);
     }
 
+
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
         if (list == null || value == null) {
             return null;
         }
-        return list.indexOf(value);
+
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).equals(value)) {
+                return i; 
+            }
+        }
+
+        return null; 
     }
 
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
