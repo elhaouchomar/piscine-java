@@ -2,13 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListSearchIndex {
+
     public static Integer findLastIndex(List<Integer> list, Integer value) {
         if (list == null || value == null) {
             return null;
         }
-        return list.lastIndexOf(value);
-    }
 
+        int lastIndex = list.lastIndexOf(value);
+        return lastIndex == -1 ? null : lastIndex; 
+    }
 
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
         if (list == null || value == null) {
