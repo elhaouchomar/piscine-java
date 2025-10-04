@@ -6,7 +6,7 @@ public class SortList {
 
     public static List<Integer> sort(List<Integer> list) {
         if (list == null) {
-            return List.of();
+            return null;
         }
         List<Integer> sorted = new ArrayList<>(list);
         Collections.sort(sorted);
@@ -16,7 +16,7 @@ public class SortList {
 
     public static List<Integer> sortReverse(List<Integer> list) {
         if (list == null) {
-            return List.of();
+            return null;
         }
         List<Integer> sorted = new ArrayList<>(list);
         Collections.sort(sorted, Collections.reverseOrder());
