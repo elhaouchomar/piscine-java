@@ -29,7 +29,13 @@ public class RegexReplace {
     
     private static String obfuscateUsername(String username) {
         if (username.contains("-") || username.contains(".") || username.contains("_")) {
-            return username.replaceAll("([-._]).","$1*");
+            int lastSeparatorIndex = Math.max(
+                Math.max(username.lastIndexOf("-"), username.lastIndexOf(".")),
+                username.lastIndexOf("_")
+            );
+            String beforeSeparator = username.substring(0, lastSeparatorIndex + 1);
+            String afterSeparator = username.substring(lastSeparatorIndex + 1);
+            return beforeSeparator + "*".repeat(afterSeparator.length());
         } else if (username.length() > 3) {
             return username.substring(0, username.length() - 3) + "***";
         }
