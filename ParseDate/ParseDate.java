@@ -7,14 +7,17 @@ import java.util.Locale;
 public class ParseDate {
     
     public static LocalDateTime parseIsoFormat(String stringDate) {
+        if (stringDate == null) {
+            return null;
+        }
         DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
         return LocalDateTime.parse(stringDate, formatter);
     }
     
     public static LocalDate parseFullTextFormat(String stringDate) {
         String[] words = stringDate.split(" ");
-        words[0] = capitalize(words[0]); 
-        words[2] = capitalize(words[2]); 
+        words[0] = capitalize(words[0]);
+        words[2] = capitalize(words[2]);
         String formattedDate = String.join(" ", words);
         
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE dd MMMM yyyy", Locale.ENGLISH);
@@ -29,9 +32,12 @@ public class ParseDate {
     }
     
     public static LocalTime parseTimeFormat(String stringDate) {
+        if (stringDate == null) {
+            return null;
+        }
         String[] parts = stringDate.split(",");
         
-        String hourPart = parts[0].trim();
+        String hourPart = parts[0].trim(); 
         String[] hourTokens = hourPart.split(" ");
         int hours = Integer.parseInt(hourTokens[0]);
         
@@ -43,7 +49,7 @@ public class ParseDate {
             hours = 0;
         }
         
-        String minutePart = parts[1].trim(); 
+        String minutePart = parts[1].trim();
         String[] minuteTokens = minutePart.split(" ");
         int minutes = Integer.parseInt(minuteTokens[0]);
         
