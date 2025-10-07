@@ -37,7 +37,7 @@ public class RegexReplace {
             String afterSeparator = username.substring(lastSeparatorIndex + 1);
             return beforeSeparator + "*".repeat(afterSeparator.length());
         } else if (username.length() > 3) {
-            return username.substring(0, username.length() - 3) + "***";
+            return username.substring(0, username.length() - 1) + "*";
         }
         return username;
     }
