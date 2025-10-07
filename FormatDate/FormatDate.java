@@ -10,7 +10,7 @@ public class FormatDate {
         if (dateTime == null) {
             return null;
         }
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("'Le 'dd MMMM 'de l''an 'yyyy 'à 'HH'h'mm'm et 'ss's'", Locale.FRENCH);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("'Le 'dd MMM 'de l''an 'yyyy 'à 'HH'h'mm'm et 'ss's'", Locale.FRENCH);
         return formatter.format(dateTime);
     }
     
