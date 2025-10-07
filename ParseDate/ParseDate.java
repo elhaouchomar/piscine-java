@@ -15,6 +15,9 @@ public class ParseDate {
     }
     
     public static LocalDate parseFullTextFormat(String stringDate) {
+        if (stringDate == null) {
+            return null;
+        }
         String[] words = stringDate.split(" ");
         words[0] = capitalize(words[0]);
         words[2] = capitalize(words[2]);
@@ -37,7 +40,7 @@ public class ParseDate {
         }
         String[] parts = stringDate.split(",");
         
-        String hourPart = parts[0].trim(); 
+        String hourPart = parts[0].trim();
         String[] hourTokens = hourPart.split(" ");
         int hours = Integer.parseInt(hourTokens[0]);
         
