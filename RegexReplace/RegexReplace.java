@@ -4,7 +4,7 @@ public class RegexReplace {
         if (s == null) {
             return null;
         }
-        String result = s.replaceAll("(\\d)(cm|€) ", "$1 ");
+        String result = s.replaceAll("(\\d)(cm|€)(?= |$)", "$1");
         return result;
     }
     
