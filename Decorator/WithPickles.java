@@ -1,4 +1,3 @@
-package Decorator;
 
 public class WithPickles extends RacletteDecorator {
 

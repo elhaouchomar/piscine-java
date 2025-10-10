@@ -1,4 +1,3 @@
-package Decorator;
 
 public abstract class RacletteDecorator implements Raclette {
     protected Raclette raclette;
