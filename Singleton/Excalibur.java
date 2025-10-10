@@ -1,6 +1,6 @@
 class Excalibur{
     private String name;
-    private Excalibur INSTANCE;
+    private static Excalibur INSTANCE;
     private Excalibur(String name) {
         this.name = name;  
     }
