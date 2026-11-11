@@ -1,23 +1,23 @@
 # piscine-java
 
 <!-- consolidated-projects:start -->
-## Projects
+## Exercises and standalone projects
 
-| Project | Folder |
+Original piscine exercises remain in this repository. Standalone projects live in their own repositories with their commit histories.
+
+| Project | Location |
 | --- | --- |
-| jart | [Open project](./jart/) |
-| jaikin | [Open project](./jaikin/) |
-| jraffic | [Open project](./jraffic/) |
-| java-intro | [Open project](./java-intro/) |
-| io-args | [Open project](./io-args/) |
-| oop1 | [Open project](./oop1/) |
-| Checkpoint 01-java | No separate repository found |
-| oop2 | [Open project](./oop2/) |
-| java-structures | [Open project](./java-structures/) |
-| Checkpoint 02-java | No separate repository found |
-| standard-lib | No separate repository found |
-| design-patterns | No separate repository found |
-| Checkpoint 03-java | No separate repository found |
-
-Imported projects retain their original Git history. Standalone repositories remain available.
+| jart | [Standalone repository](https://github.com/elhaouchomar/jart) |
+| jaikin | [Standalone repository](https://github.com/elhaouchomar/jaikin) |
+| jraffic | [Standalone repository](https://github.com/elhaouchomar/jraffic) |
+| java-intro | [Exercises](./java-intro/) |
+| io-args | [Exercises](./io-args/) |
+| oop1 | [Exercises](./oop1/) |
+| Checkpoint 01-java | Existing exercise files retained; no separate repository found |
+| oop2 | [Exercises](./oop2/) |
+| java-structures | [Exercises](./java-structures/) |
+| Checkpoint 02-java | Existing exercise files retained; no separate repository found |
+| standard-lib | Existing exercise files retained; no separate repository found |
+| design-patterns | Existing exercise files retained; no separate repository found |
+| Checkpoint 03-java | Existing exercise files retained; no separate repository found |
 <!-- consolidated-projects:end -->

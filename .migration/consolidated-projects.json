@@ -1,21 +1,24 @@
 [
   {
     "name": "jart",
-    "status": "imported",
+    "status": "standalone repository",
     "branch": "main",
-    "commit": "2d0416385ef2187204ac05e99acdee7dbb51af91"
+    "commit": "2d0416385ef2187204ac05e99acdee7dbb51af91",
+    "url": "https://github.com/elhaouchomar/jart"
   },
   {
     "name": "jaikin",
-    "status": "imported",
+    "status": "standalone repository",
     "branch": "main",
-    "commit": "784d79b2654ffe4724fd12f86990b7549de28fbc"
+    "commit": "784d79b2654ffe4724fd12f86990b7549de28fbc",
+    "url": "https://github.com/elhaouchomar/jaikin"
   },
   {
     "name": "jraffic",
-    "status": "imported",
+    "status": "standalone repository",
     "branch": "main",
-    "commit": "e9e0f4abcb317567b8a587d945668b2c2bd68870"
+    "commit": "e9e0f4abcb317567b8a587d945668b2c2bd68870",
+    "url": "https://github.com/elhaouchomar/jraffic"
   },
   {
     "name": "java-intro",
