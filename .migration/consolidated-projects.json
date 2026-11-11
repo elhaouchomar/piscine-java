@@ -1,0 +1,65 @@
+[
+  {
+    "name": "jart",
+    "status": "imported",
+    "branch": "main",
+    "commit": "2d0416385ef2187204ac05e99acdee7dbb51af91"
+  },
+  {
+    "name": "jaikin",
+    "status": "imported",
+    "branch": "main",
+    "commit": "784d79b2654ffe4724fd12f86990b7549de28fbc"
+  },
+  {
+    "name": "jraffic",
+    "status": "imported",
+    "branch": "main",
+    "commit": "e9e0f4abcb317567b8a587d945668b2c2bd68870"
+  },
+  {
+    "name": "java-intro",
+    "status": "already inside",
+    "folder": "java-intro"
+  },
+  {
+    "name": "io-args",
+    "status": "already inside",
+    "folder": "io-args"
+  },
+  {
+    "name": "oop1",
+    "status": "already inside",
+    "folder": "oop1"
+  },
+  {
+    "name": "Checkpoint 01-java",
+    "status": "no standalone repository found"
+  },
+  {
+    "name": "oop2",
+    "status": "already inside",
+    "folder": "oop2"
+  },
+  {
+    "name": "java-structures",
+    "status": "already inside",
+    "folder": "java-structures"
+  },
+  {
+    "name": "Checkpoint 02-java",
+    "status": "no standalone repository found"
+  },
+  {
+    "name": "standard-lib",
+    "status": "no standalone repository found"
+  },
+  {
+    "name": "design-patterns",
+    "status": "no standalone repository found"
+  },
+  {
+    "name": "Checkpoint 03-java",
+    "status": "no standalone repository found"
+  }
+]
